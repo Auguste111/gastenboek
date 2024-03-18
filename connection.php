@@ -2,17 +2,10 @@
 <?php
 
 // Database configuratie
-$host = "klas4s23.mid-ica.nl"; 
-$username = "588492@klas4s23.mid-ica.nl"; 
-$password = "dgDYbJH6"; 
-$database = "klas4s23_588492"; 
+require_once 'config.php';
 
-// Verbinding maken met de database
-$conn = new mysqli($host, $username, $password, $database);
+// Verbinding maken met de database met PDO
+$conn = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
 
-// Controleren op fouten tijdens het verbinden
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 ?>

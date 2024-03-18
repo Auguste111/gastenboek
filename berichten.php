@@ -9,18 +9,13 @@
 </head>
 
 <body>
-
-
     <h1>Gastenboek</h1>
-
-
 
     <div class="chat">
         <?php
         $json_data = file_get_contents("berichten.json");
         $data = json_decode($json_data, true);
         $htmlString = "";
-
 
         foreach ($data as $bericht) {
 
@@ -43,14 +38,7 @@
 
         echo $htmlString;
         ?>
-
             <a class="scroll-to-bottom" href="index.php">+</a>
     </div>
-
-
-
-    
-
 </body>
-
 </html>
