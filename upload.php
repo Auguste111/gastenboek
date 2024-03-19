@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $berichtData = [
         "name" => $naam, 
         "message" => $bericht,
-        "imagePath" => $file,
+        "fileToUpload" => $file,
         "timestamp" => $timestamp,
     ];
 
@@ -40,7 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     header('Content-Type: application/json');
-    echo json_encode($response);
+    // echo json_encode($response);
+    header('Location: berichten.php');
 }
 
 function handleError($errorType){
@@ -92,4 +93,6 @@ function HandleImageUpload()
   }
 
   return $target_file;
+
+header('Location: berichten.php');
 }

@@ -1,5 +1,5 @@
 // save submitbutton in variable 
-let submitButton = document.getElementById('submitBtn');
+let submitButton = document.getElementById('button');
 submitButton.addEventListener('click', validateForm);
 
 // function for validating the input (front-end) and sending the values to the backend

@@ -19,12 +19,12 @@
 
         foreach ($data as $bericht) {
 
-            $photoHtml = isset($bericht['afbeelding']) ? "<img src='uploads/{$bericht['afbeelding']}' onerror='this.style.display=\"none\"'>" : "";
+            $photoHtml = isset($bericht['fileToUpload']) ? "<img src='{$bericht['fileToUpload']}' onerror='this.style.display=\"none\"'>" : "";
             $htmlString .=
                 "
         <section class=\"bericht-section\">
-            <h1>{$bericht['naam']}</h1>
-            <h2>{$bericht['bericht']}<h2>
+            <h1>{$bericht['name']}</h1>
+            <h2>{$bericht['message']}<h2>
             {$photoHtml}
             <h3>{$bericht['timestamp']}</h3>
         </section>
