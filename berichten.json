@@ -1,44 +1,29 @@
 [
+
     {
-        "name": "yyyyy",
-        "message": "yyyyyy",
-        "fileToUpload": "uploads\/Forza afbeelding.jpg",
-        "timestamp": "19-03-2024 11:12"
+        "name": "gesgees",
+        "message": "geseggesges",
+        "fileToUpload": {
+            "name": "berkhoud 1.jpg",
+            "full_path": "berkhoud 1.jpg",
+            "type": "image\/jpeg",
+            "tmp_name": "C:\\xampp\\tmp\\php396.tmp",
+            "error": 0,
+            "size": 443513
+        },
+        "timestamp": "29-03-2024 10:26"
     },
     {
-        "name": "333",
-        "message": "333",
-        "fileToUpload": "uploads\/data49633411-ca3ba9.jpg",
-        "timestamp": "19-03-2024 11:12"
-    },
-    {
-        "name": "33",
-        "message": "33",
-        "fileToUpload": "uploads\/tygo.jpg",
-        "timestamp": "19-03-2024 11:13"
-    },
-    {
-        "name": "Mark Datemad",
-        "message": "ttt",
-        "fileToUpload": "uploads\/tired-exhausted.png",
-        "timestamp": "19-03-2024 11:13"
-    },
-    {
-        "name": "dddd",
-        "message": "dddd",
-        "fileToUpload": "uploads\/glijbaaan 1.jpg",
-        "timestamp": "19-03-2024 12:18"
-    },
-    {
-        "name": "wwwwww",
-        "message": "&lt;script&gt;alert(\\&quot;Dit moet je wel fixen!\\&quot;)&lt;\\\/script&gt;",
-        "fileToUpload": "uploads\/foto 2.jpg",
-        "timestamp": "19-03-2024 12:21"
-    },
-    {
-        "name": "wwwwww",
-        "message": "&lt;script&gt;alert(\\&quot;Dit moet je wel fixen!\\&quot;)&lt;\\\/script&gt;",
-        "fileToUpload": "uploads\/foto 2.jpg",
-        "timestamp": "19-03-2024 12:21"
+        "name": "Mark Datema",
+        "message": "222",
+        "fileToUpload": {
+            "name": "tired-exhausted.png",
+            "full_path": "tired-exhausted.png",
+            "type": "image\/png",
+            "tmp_name": "C:\\xampp\\tmp\\phpE899.tmp",
+            "error": 0,
+            "size": 225153
+        },
+        "timestamp": "29-03-2024 10:41"
     }
 ]

@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gastenboek</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
+
 <body>
-    <section id="one">
-        <h1>Gastenboek</h1>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="name" id= "name" placeholder="Type je naam">
-            <textarea name="message" id="message" rows="5" placeholder="Type je bericht"></textarea>
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <button id="button"> verstuur gegevens</button>     
-            </form>
+    <h1>Gastenboek</h1>
+
+    <div class="chat">
+        <?php
+        $json_data = file_get_contents("berichten.json");
+        $data = json_decode($json_data, true);
+        $htmlString = "";
+
+        foreach ($data as $bericht) {
+
+            $photoHtml = isset($bericht['fileToUpload']['name']) ? "<img src='uploads/{$bericht['fileToUpload']['name']}' onerror='this.style.display=\"none\"'>" : "";
+            $htmlString .=
+                "
+        <section class=\"bericht-section\">
+            <h1>{$bericht['name']}</h1>
+            <h2>{$bericht['message']}<h2>
+            {$photoHtml}
+            <h3>{$bericht['timestamp']}</h3>
         </section>
-    </body>
-    <script src="script.js"></script>
+        ";
+
+            // Controleren of er een afbeelding is toegevoegd aan het bericht
+
+
+            $htmlString .= "</section>";
+        }
+
+        echo $htmlString;
+        ?>
+        <a class="scroll-to-bottom" href="send.php">+</a>
+    </div>
+</body>
+
 </html>
