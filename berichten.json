@@ -1,5 +1,4 @@
 [
-
     {
         "name": "gesgees",
         "message": "geseggesges",
@@ -25,5 +24,57 @@
             "size": 225153
         },
         "timestamp": "29-03-2024 10:41"
+    },
+    {
+        "name": "hhhh",
+        "message": "hhhhhh",
+        "fileToUpload": {
+            "name": "naam 1.jpg",
+            "full_path": "naam 1.jpg",
+            "type": "image\/jpeg",
+            "tmp_name": "C:\\xampp\\tmp\\php3B1C.tmp",
+            "error": 0,
+            "size": 320826
+        },
+        "timestamp": "29-03-2024 11:00"
+    },
+    {
+        "name": "Mark Datemad",
+        "message": "9uiugjyhcrttrjdfyu",
+        "fileToUpload": {
+            "name": "glijbaan 2.jpg",
+            "full_path": "glijbaan 2.jpg",
+            "type": "image\/jpeg",
+            "tmp_name": "C:\\xampp\\tmp\\phpC936.tmp",
+            "error": 0,
+            "size": 175410
+        },
+        "timestamp": "29-03-2024 11:04"
+    },
+    {
+        "name": "Mark Datema",
+        "message": "Hallo ik ben een geest",
+        "fileToUpload": {
+            "name": "data49633411-ca3ba9.jpg",
+            "full_path": "data49633411-ca3ba9.jpg",
+            "type": "image\/jpeg",
+            "tmp_name": "C:\\xampp\\tmp\\phpE12B.tmp",
+            "error": 0,
+            "size": 186175
+        },
+        "timestamp": "30-03-2024 15:07"
+    },
+    {
+        "name": "tgdrht",
+        "message": "ghfghd",
+        "fileToUpload": {
+            "name": "foto 2.jpg",
+            "full_path": "foto 2.jpg",
+            "type": "image\/jpeg",
+            "tmp_name": "C:\\xampp\\tmp\\php84DF.tmp",
+            "error": 0,
+            "size": 39157
+        },
+        "timestamp": "02-04-2024 12:19"
     }
 ]
