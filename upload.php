@@ -4,6 +4,7 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Controleer of er minder dan een minuut is verstreken sinds de laatste verzending
     if (!isset($_SESSION['last_submit_time']) || (time() - $_SESSION['last_submit_time']) > 60) {
+        // Bestandsinformatie ophalen
         $naam = htmlspecialchars($_POST["name"]);
         $bericht = htmlspecialchars($_POST["message"]);
         $timestamp = date("d-m-Y H:i");
@@ -20,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             HandleUpload($naam, $bericht, $file, $timestamp);
         }
     } else {
-        handleError("1 minuut wachten voor een nieuw bericht");
+        handleError("Je moet 1 minuut wachten voordat je een nieuw bericht kunt plaatsen.");
     }
 }
 
@@ -100,13 +101,8 @@ function HandleUpload($naam, $bericht, $file, $timestamp)
     // Update de tijd van de laatste verzending
     $_SESSION['last_submit_time'] = time();
 
-    $response = array(
-        "success" => "true",
-        "status" => "success"
-    );
-
-    header('Content-Type: application/json');
-    echo json_encode($response);
+    // Redirect de gebruiker naar het gastenboek nadat de verzending succesvol is
+    header("Location: gastenboek.php");
     exit();
 }
 ?>

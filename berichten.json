@@ -76,5 +76,31 @@
             "size": 39157
         },
         "timestamp": "02-04-2024 12:19"
+    },
+    {
+        "name": "wwww",
+        "message": "wwww",
+        "fileToUpload": {
+            "name": "charizzard.gif",
+            "full_path": "charizzard.gif",
+            "type": "image\/gif",
+            "tmp_name": "C:\\xampp\\tmp\\php20DC.tmp",
+            "error": 0,
+            "size": 244322
+        },
+        "timestamp": "04-04-2024 11:12"
+    },
+    {
+        "name": "Mark Datema",
+        "message": "5555",
+        "fileToUpload": {
+            "name": "gates_and_allen.jpg",
+            "full_path": "gates_and_allen.jpg",
+            "type": "image\/jpeg",
+            "tmp_name": "C:\\xampp\\tmp\\php5EAF.tmp",
+            "error": 0,
+            "size": 65483
+        },
+        "timestamp": "04-04-2024 11:13"
     }
 ]
