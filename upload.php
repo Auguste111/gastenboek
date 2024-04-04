@@ -1,21 +1,26 @@
 <?php
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Bestandsinformatie ophalen
-    $naam = htmlspecialchars($_POST["name"]);
-    $bericht = htmlspecialchars($_POST["message"]);
-    $timestamp = date("d-m-Y H:i");
+    // Controleer of er minder dan een minuut is verstreken sinds de laatste verzending
+    if (!isset($_SESSION['last_submit_time']) || (time() - $_SESSION['last_submit_time']) > 60) {
+        $naam = htmlspecialchars($_POST["name"]);
+        $bericht = htmlspecialchars($_POST["message"]);
+        $timestamp = date("d-m-Y H:i");
 
-    // check if file is uploaded set to null if not
-    $file = isset($_FILES["fileToUpload"]) ? $_FILES["fileToUpload"] : null;
+        // check if file is uploaded set to null if not
+        $file = isset($_FILES["fileToUpload"]) ? $_FILES["fileToUpload"] : null;
 
-    // if name is longer than 50 characters error
-    if (strlen($naam) > 50) {
-        handleError("nameTooLong");
-    } else if (strlen($bericht) > 200) {
-        handleError("messageTooLong");
+        // if name is longer than 50 characters error
+        if (strlen($naam) > 50) {
+            handleError("nameTooLong");
+        } else if (strlen($bericht) > 200) {
+            handleError("messageTooLong");
+        } else {
+            HandleUpload($naam, $bericht, $file, $timestamp);
+        }
     } else {
-        HandleUpload($naam, $bericht, $file, $timestamp);
+        handleError("1 minuut wachten voor een nieuw bericht");
     }
 }
 
@@ -92,6 +97,9 @@ function HandleUpload($naam, $bericht, $file, $timestamp)
     // Bijgewerkte berichtgegevens opslaan in JSON-bestand
     file_put_contents($berichtfile, $json_data);
 
+    // Update de tijd van de laatste verzending
+    $_SESSION['last_submit_time'] = time();
+
     $response = array(
         "success" => "true",
         "status" => "success"
@@ -101,3 +109,4 @@ function HandleUpload($naam, $bericht, $file, $timestamp)
     echo json_encode($response);
     exit();
 }
+?>
