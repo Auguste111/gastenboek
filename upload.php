@@ -102,7 +102,7 @@ function HandleUpload($naam, $bericht, $file, $timestamp)
     $_SESSION['last_submit_time'] = time();
 
     // Redirect de gebruiker naar het gastenboek nadat de verzending succesvol is
-    header("Location: gastenboek.php");
+    header("Location: index.php");
     exit();
 }
 ?>
